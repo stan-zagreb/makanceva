@@ -47,14 +47,14 @@ h1 .st{display:block;font-style:italic;font-weight:400;color:var(--blue);font-si
 .section{padding:54px 0}
 .sec-head{margin-bottom:8px}
 .sec-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.9rem;letter-spacing:-.01em}
-.hint{color:var(--ink-soft);font-size:.95rem;margin-bottom:26px}
+.hint{color:var(--ink-soft);font-size:clamp(1.25rem,3vw,1.75rem);margin-bottom:26px;font-weight:500}
 .hint b{color:var(--green-deep)}
 
 .plan-card{background:#fbf8f1;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);position:relative}
 .plan{position:relative;width:100%;line-height:0}
 .plan img{width:100%;height:auto;display:block;border-radius:8px;filter:saturate(.9)}
-.marker{position:absolute;transform:translate(-50%,-50%);width:clamp(30px,3.6vw,42px);height:clamp(30px,3.6vw,42px);
-  border-radius:50%;background:var(--green);color:#fff;font-family:'Hanken Grotesk';font-weight:700;font-size:clamp(.85rem,1.7vw,1.05rem);
+.marker{position:absolute;transform:translate(-50%,-50%);width:clamp(24px,2.9vw,34px);height:clamp(24px,2.9vw,34px);
+  border-radius:50%;background:var(--green);color:#fff;font-family:'Hanken Grotesk';font-weight:700;font-size:clamp(.72rem,1.4vw,.9rem);
   display:flex;align-items:center;justify-content:center;cursor:pointer;border:2.5px solid rgba(255,255,255,.92);
   box-shadow:0 6px 16px -4px rgba(35,94,59,.65);transition:transform .18s cubic-bezier(.34,1.56,.64,1),background .18s;z-index:2}
 .marker::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--green);opacity:0;transform:scale(.6);transition:opacity .3s,transform .3s}
@@ -198,6 +198,8 @@ const STATUS = "";                     // "" ili "PRODANO"
 const IME    = "Luka Blažević";
 const BROJ   = "098 693 938";
 const TEL    = "tel:+38598693938";
+const MAIL   = "blaz00012@gmail.com";
+const MAILTO = "mailto:blaz00012@gmail.com";
 
 const SOBE = [
   { broj:1,  nazivHr:"Ulaz i hodnik", nazivEn:"Entrance & hallway", x:46.6, y:26.7, slike:[] },
@@ -213,9 +215,9 @@ const SOBE = [
   { broj:11, nazivHr:"Dvorište",    nazivEn:"Courtyard",   x:3.0,  y:43.2, slike:[] },
 ];
 
-const SHORT = IME + '<br><a href="' + TEL + '">' + BROJ + '</a>';
+const SHORT = IME + '<br><a href="' + TEL + '">' + BROJ + '</a><br><a href="' + MAILTO + '">✉ ' + MAIL + '</a>';
 const BROJ_INT = "+385 98 693 938";
-const SHORT_EN = IME + '<br><a href="' + TEL + '">' + BROJ_INT + '</a>';
+const SHORT_EN = IME + '<br><a href="' + TEL + '">' + BROJ_INT + '</a><br><a href="' + MAILTO + '">✉ ' + MAIL + '</a>';
 
 const T = {
   hr:{
@@ -239,7 +241,7 @@ const T = {
     ],
     contactK:"Kontakt",
     short:SHORT,
-    full:'Za dodatne upite javite se na broj <a href="'+TEL+'">'+BROJ+'</a><br>'+IME,
+    full:'Za dodatne upite javite se na broj <a href="'+TEL+'">'+BROJ+'</a> ili e-mailom na <a href="'+MAILTO+'">'+MAIL+'</a><br>'+IME,
     compass:["S","I","J","Z"],
     photosSoon:"Fotografije uskoro",
     sold:"PRODANO",
@@ -266,7 +268,7 @@ const T = {
     ],
     contactK:"Contact",
     short:SHORT_EN,
-    full:'To arrange a viewing or for further information, please call <a href="'+TEL+'">'+BROJ_INT+'</a><br>'+IME,
+    full:'To arrange a viewing or for further information, please call <a href="'+TEL+'">'+BROJ_INT+'</a> or email <a href="'+MAILTO+'">'+MAIL+'</a><br>'+IME,
     compass:["N","E","S","W"],
     photosSoon:"Photographs to follow",
     sold:"SOLD",
