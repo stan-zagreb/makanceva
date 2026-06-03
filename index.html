@@ -284,7 +284,7 @@ const FLAG = {
    ====================  ISPOD OVOGA NE TREBA DIRATI  ==================
    ===================================================================== */
 const byNum={}; SOBE.forEach(s=>byNum[s.broj]=s);
-const FOTO = {"1": ["1-1.jpg", "1-2.jpg", "1-3.jpg"], "2": ["2-1.jpg"], "3": ["3-1.jpg", "3-2.jpg"], "4": ["4-1.jpg", "4-2.jpg"], "5": ["5-1.jpg"], "6": ["6-1.jpg"], "7": ["7-1.jpg"], "8": ["8-1.jpg"], "9": ["9-1.jpg", "9-2.jpg"], "10": ["10-1.jpg"], "11": ["11-1.jpg"]};
+const FOTO = {"1": ["slike/01-1.jpg", "slike/01-2.jpg", "slike/01-3.jpg"], "2": ["slike/02-1.jpg"], "3": ["slike/03-1.jpg", "slike/03-2.jpg"], "4": ["slike/04-1.jpg", "slike/04-2.jpg"], "5": ["slike/05-1.jpg"], "6": ["slike/06-1.jpg"], "7": ["slike/07-1.jpg"], "8": ["slike/08-1.jpg"], "9": ["slike/09-1.jpg", "slike/09-2.jpg"], "10": ["slike/10-1.jpg"], "11": ["slike/11-1.jpg"]};
 SOBE.forEach(s=>{ if(FOTO[s.broj]&&FOTO[s.broj].length) s.slike=FOTO[s.broj]; });
 const $=id=>document.getElementById(id);
 const plan=$('plan'), legend=$('legend'), lb=$('lb');
